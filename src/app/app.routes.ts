@@ -35,6 +35,13 @@ export const routes: Routes = [
             (m) => m.ContactModule,
           ),
       },
+      {
+        path: '**',
+        loadChildren: () =>
+          import('./public/page-not-found/page-not-found-module').then(
+            (m) => m.PageNotFoundModule,
+          ),
+      },
     ],
   },
 ];
